@@ -1,0 +1,59 @@
+:root{
+      --purple: #6c3cc9;
+        --blue: #1e90ff;
+          --gold: #ffd776;
+            --bg-light: linear-gradient(180deg,#f7fbff,#ffffff);
+              --bg-dark: linear-gradient(180deg,#070710,#0f1220);
+                --text-light: #111;
+                  --text-dark: #eee;
+                  }
+
+                  *{ box-sizing:border-box; }
+                  html,body,#root{ height:100%; margin:0; font-family:"Times New Roman", Times, serif; }
+                  .app { min-height:100vh; position:relative; overflow:hidden; }
+                  .app.light { background: var(--bg-light); color: var(--text-light); }
+                  .app.dark { background: var(--bg-dark); color: var(--text-dark); }
+
+                  .background-canvas { position: fixed; inset:0; z-index:0; pointer-events:none; opacity:0.42; }
+
+                  .topbar{ position:relative; z-index:3; display:flex; justify-content:space-between; align-items:center; padding:18px 28px; }
+                  .brand{ margin:0; font-size:22px; letter-spacing:1px; color:var(--purple); }
+                  .main{ position:relative; z-index:2; padding:28px; min-height:70vh; }
+
+                  /* card styles */
+                  .card{ max-width:980px; margin:18px auto; background: rgba(255,255,255,0.9); padding:20px; border-radius:12px; box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+                  .app.dark .card{ background: rgba(10,10,12,0.7); color:var(--text-dark); }
+
+                  /* role cards */
+                  .card-row{ display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+                  .role-card{ width:320px; padding:18px; border-radius:12px; cursor:pointer; transition: transform .18s, box-shadow .18s; background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6)); }
+                  .app.dark .role-card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+                  .role-card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.12); }
+                  .role-icon{ font-size:36px; padding:8px; border-radius:10px; transition: box-shadow .18s; }
+                  .role-card:hover .role-icon{ box-shadow: 0 0 18px rgba(108,60,201,0.45); }
+
+                  /* forms */
+                  input, textarea{ width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ddd; font-family: "Times New Roman"; }
+                  .primary{ background: linear-gradient(90deg,var(--purple),var(--blue)); color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; }
+
+                  /* hamburger sliding menu from left */
+                  .side-menu{ position:fixed; left:-360px; top:0; bottom:0; width:320px; background: rgba(255,255,255,0.96); z-index:40; padding:20px; transition:left .36s; }
+                  .app.dark .side-menu{ background: rgba(10,10,12,0.96); }
+                  .side-menu.open{ left:0; }
+                  .side-overlay{ position:fixed; inset:0; z-index:39; background:rgba(0,0,0,0.12); opacity:0; pointer-events:none; transition:opacity .2s; }
+                  .side-overlay.open{ opacity:1; pointer-events:auto; }
+
+                  /* small helpers */
+                  .oauth-btn{ display:inline-flex; gap:10px; padding:10px;border-radius:8px; text-decoration:none; background:rgba(255,255,255,0.9); }
+                  .status{ color:gray; margin-top:8px; }
+
+                  /* Set password modal */
+                  .set-password-modal{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:60; }
+                  .modal-card{ width:420px; background: white; padding:22px; border-radius:12px; box-shadow: 0 24px 70px rgba(0,0,0,0.24); }
+                  .app.dark .modal-card{ background: #0b0c10; color:var(--text-dark); }
+
+                  /* small responsive */
+                  @media (max-width:680px){
+                    .card-row{ flex-direction:column; align-items:stretch; }
+                    }
+               
