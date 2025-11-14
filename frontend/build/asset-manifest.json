@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Zeiroko/static/css/main.2f7d3765.css",
+    "main.js": "/Zeiroko/static/js/main.3714f98c.js",
+    "index.html": "/Zeiroko/index.html",
+    "main.2f7d3765.css.map": "/Zeiroko/static/css/main.2f7d3765.css.map",
+    "main.3714f98c.js.map": "/Zeiroko/static/js/main.3714f98c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f7d3765.css",
+    "static/js/main.3714f98c.js"
+  ]
+}
